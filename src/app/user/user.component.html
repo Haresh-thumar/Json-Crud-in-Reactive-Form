@@ -1,0 +1,60 @@
+<h1 class="text-center mt-5">Json Server CRUD</h1>
+
+<div class="container mt-5">
+  <form [formGroup]="userFormData">
+    <div class="form-group">
+      <strong for="exampleInputEmail1">Name :</strong>
+      <input type="name" class="form-control border border-dark mt-2" formControlName="name">
+    </div>
+    <br>
+    <div class="form-group">
+      <strong for="exampleInputPassword1">Email :</strong>
+      <input type="email" class="form-control border border-dark mt-2" formControlName="email">
+    </div>
+    <br>
+    <div class="form-group">
+      <strong for="exampleInputPassword1">Mobile :</strong>
+      <input type="number" class="form-control border border-dark mt-2" formControlName="mobile">
+    </div>
+    <br>
+    <div class="row justify-content-center">
+      <button type="submit" class="btn btn-success px-4 py-2" (click)="addData()">Submit</button>
+      <button type="submit" class="btn btn-danger px-4 py-2 ml-4" (click)="cancel()">Cancel</button>
+    </div>
+  </form>
+
+
+
+
+  <h1 class="text-center mt-5">Display Data</h1>
+  <br>
+  <table class="table">
+    <thead class="thead bg-dark text-light">
+      <tr>
+        <th>Id</th>
+        <th>Name</th>
+        <th>Email</th>
+        <th>Mobile</th>
+        <th class="text-center">Action</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr *ngFor="let item of userTableData">
+        <td>{{item.id}}</td>
+        <td>{{item.name}}</td>
+        <td>{{item.email}}</td>
+        <td>{{item.mobile}}</td>
+        <td class="text-center">
+          <!-- <button class="btn btn-primary mr-3" (click)="onEdit(item)"> -->
+          <button class="btn btn-primary mr-3">
+            <i class="fa fa-pencil-square-o"></i>
+          </button>
+          <button class="btn btn-danger" (click)="deleteData(item.id)">
+            <i class="fa fa-trash"></i>
+          </button>
+        </td>
+      </tr>
+    </tbody>
+  </table>
+
+</div>

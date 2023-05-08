@@ -1,0 +1,22 @@
+{
+  "productList": [
+    {
+      "id": 11,
+      "name": "Haresh Thumar",
+      "email": "Hareshthumar@gmail.com",
+      "mobile": 9876589428
+    },
+    {
+      "id": 13,
+      "name": "Rushabh Thumar",
+      "email": "rushabhthumar@gmail.com",
+      "mobile": 9855456588
+    },
+    {
+      "id": 14,
+      "name": "Laxmita Thumar",
+      "email": "laxmitathumar@gmail.com",
+      "mobile": 7855656656
+    }
+  ]
+}
